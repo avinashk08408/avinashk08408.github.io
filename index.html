@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Avinash K - Cybersecurity Portfolio</title>
+  <meta name="description" content="Avinash K -- Cyber Security Student. Projects in process: Encrypted file sharing, Browser history analyzer, Fake account detector. Contact: avinashk08408@gmail.com" />
+  <style>
+    :root{
+      --bg:#101417;
+      --panel:#21272c;
+      --accent:#18d178;
+      --muted:#ccc;
+      --card:#181d22;
+      --glass: rgba(255,255,255,0.03);
+    }
+
+    html,body{height:100%}
+    body {
+      margin: 0;
+      font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: var(--bg);
+      color: #eee;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* binary background */
+    .binary-bg {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+      opacity: 0.09;
+      font-size: 1.6rem;
+      animation: scrollBin 14s linear infinite;
+      white-space: pre;
+      font-family: "Courier New", monospace;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 40px;
+      line-height: 1.2;
+      letter-spacing: 6px;
+      color: #00ff88;
+    }
+
+    @keyframes scrollBin {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-260px); }
+    }
+
+    header {
+      text-align: center;
+      background: #232e39;
+      padding: 36px 16px 22px;
+      border-bottom: 2px solid rgba(24,209,120,0.15);
+      margin-bottom: 34px;
+      box-shadow: 0 6px 30px rgba(0,0,0,0.45);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+      color: var(--accent);
+      text-shadow: 0 2px 18px rgba(24,209,120,0.18);
+    }
+
+    header p.lead {
+      margin: 8px 0 12px;
+      color: #dfeee8;
+      font-weight: 600;
+      opacity: 0.95;
+    }
+
+    .contact-links {
+      margin-top: 8px;
+    }
+
+    .cyber-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 10px;
+      display:inline-block;
+      padding: 6px 10px;
+      border-radius: 6px;
+      background: linear-gradient(180deg, rgba(24,209,120,0.03), transparent);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+
+    .cyber-link:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(24,209,120,0.08); text-decoration: none; }
+
+    main{max-width:980px;margin:0 auto;padding:0 16px 48px;}
+
+    section {
+      background: var(--panel);
+      border-radius: 12px;
+      padding: 22px;
+      box-shadow: 0 6px 28px rgba(0,0,0,0.45);
+      margin-bottom: 22px;
+      animation: fadeInUp .6s ease both;
+    }
+
+    @keyframes fadeInUp {
+      from{opacity:0; transform: translateY(14px)}
+      to{opacity:1; transform: translateY(0)}
+    }
+
+    h2 { color: var(--accent); margin: 0 0 12px; font-size:1.4rem; }
+    p, li { color: var(--muted); line-height:1.6; font-size:1rem; }
+
+    /* cards grid */
+    .grid {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+      margin-top: 12px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), var(--glass));
+      border-radius: 10px;
+      padding: 14px;
+      border: 1px solid rgba(255,255,255,0.03);
+      transition: transform .28s cubic-bezier(.2,.9,.3,1), box-shadow .28s;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .card:hover { transform: translateY(-10px); box-shadow: 0 18px 50px rgba(0,0,0,0.65); }
+
+    .card h3 { margin:0; color: #c8fbe0; font-size:1.05rem; }
+    .card p { margin:0; color: #d7dedb; font-size:0.96rem; }
+
+    .status {
+      display:inline-block;
+      font-weight:700;
+      padding:6px 10px;
+      border-radius:6px;
+      font-size:0.86rem;
+      margin-top:10px;
+    }
+    .status-active { background: #18d178; color: #081012; box-shadow: 0 6px 20px rgba(24,209,120,0.08); }
+    .status-planning { background: #ff9f1c; color: #081012; }
+    .status-none { background: rgba(255,255,255,0.06); color: #d7dedb; }
+
+    /* list niceties */
+    ul.skills { display:flex; gap:10px; flex-wrap:wrap; padding:0; list-style:none; margin:8px 0 0; }
+    ul.skills li { background: rgba(255,255,255,0.03); padding:8px 10px; border-radius:8px; border-left:3px solid rgba(255,255,255,0.03); font-weight:600; color:#dfeee8; font-size:0.95rem; }
+
+    footer {
+      text-align:center;
+      color: var(--accent);
+      margin-top: 18px;
+      font-size: 0.92rem;
+      padding: 18px 6px;
+      border-top: 1px solid rgba(24,209,120,0.06);
+      background: transparent;
+      max-width:980px;
+      margin-left:auto;margin-right:auto;
+      border-radius:8px;
+    }
+
+    /* small screens */
+    @media (max-width:520px){
+      header h1{font-size:1.8rem}
+      .binary-bg{font-size:1.1rem}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="binary-bg" aria-hidden="true">
+    01001001 01101110 01110100 01100101 01101100 00100000 01100101 01101110 01100111 01101001
+    01101110 01100101 01100101 01110010 00100000 01100001 01110010 01100101 00100000 01101000
+    01100101 01110010 01100101 00100000 01000001 01010110 01001001 01001110 01000001 01010011
+  </div>
+
+  <header>
+    <h1>Avinash K</h1>
+    <p class="lead">Cyber Security Student -- curious about how things break and how to fix them</p>
+    <div class="contact-links">
+      <a class="cyber-link" href="mailto:avinashk08408@gmail.com">E-Mail</a>
+      <a class="cyber-link" href="https://www.linkedin.com/in/avinash-k-201b47384?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </header>
+
+  <main>
+    <section aria-labelledby="about-heading">
+      <h2 id="about-heading">About Me</h2>
+      <p>
+        Hi -- I'm <strong>Avinash K</strong>, a Cyber Security student who loves coding and building defensive tools.
+        I'm interested in <strong>HTML, Python, C, and C++</strong>, and I enjoy turning security ideas into practical projects and I enjoys exploring how systems work, finding vulnerabilities, and building secure applications. 
+      </p>
+    </section>
+
+    <section aria-labelledby="projects-process">
+      <h2 id="projects-process">Projects In Process ⚙️</h2>
+
+      <div class="grid">
+        <article class="card" aria-labelledby="proj1">
+          <h3 id="proj1">Encrypted File Sharing Platform (auto-expire)</h3>
+          <p>
+            Designing a secure file sharing service that encrypts files end-to-end and automatically
+            expires / destroys keys and links after a configurable time window.
+          </p>
+          <span class="status status-active">🔄 In Progress</span>
+        </article>
+
+        <article class="card" aria-labelledby="proj2">
+          <h3 id="proj2">Browser History Analyzer</h3>
+          <p>
+            Building a Python-based analyzer that processes browser history to surface suspicious
+            patterns, trackers, and privacy leaks for investigative or privacy-improvement workflows.
+          </p>
+          <span class="status status-active">🔄 In Progress</span>
+        </article>
+
+        <article class="card" aria-labelledby="proj3">
+          <h3 id="proj3">Fake Account Detector (social platforms)</h3>
+          <p>
+            Implementing machine-learning heuristics and rule-based signals to detect fake or bot
+            accounts across social platforms, focusing on behavior and metadata analysis.
+          </p>
+          <span class="status status-active">🔄 In Progress</span>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="projects-completed">
+      <h2 id="projects-completed">Completed Projects ✅</h2>
+      <div class="grid">
+        <article class="card" aria-labelledby="none">
+          <h3 id="none">No completed projects yet</h3>
+          <p>
+            I'm currently focused on the projects above. Check back soon -- I'll add completed project write-ups and GitHub links as I finish them.
+          </p>
+          <span class="status status-none">-- None yet --</span>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="skills">
+      <h2 id="skills">Skills & Technologies</h2>
+      <ul class="skills" aria-label="skills list">
+        <li>HTML</li>
+        <li>Python</li>
+        <li>C</li>
+        <li>C++</li>
+        <li>Linux</li>
+        <li>Networking basics</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Avinash K · Cybersecurity Student · <a href="mailto:avinashk08408@gmail.com" style="color:var(--accent);text-decoration:none;font-weight:700">Contact</a>
+  </footer>
+
+</body>
+</html>

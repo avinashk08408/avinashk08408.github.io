@@ -17,11 +17,11 @@
 ▸ Knowledge of cybersecurity fundamentals, secure system design, and networking principles.
     </p>
     <h3>Contact</h3>
-   <p>▸ E-mail:<a href="mailot:avinashk08408@gmail.com">avinashk08408@gmail.com</a></p>
- <p> ▸ Linkdin:<a href="https://www.linkedin.com/in/avinash-k-201b47384">https://www.linkedin.com/in/avinash-k-201b47384</a></p>
-  ▸ WhatsApp:6379301585
+▸ E-mail:<a href="mailot:avinashk08408@gmail.com">avinashk08408@gmail.com</a>
+▸ Linkdin:<a href="https://www.linkedin.com/in/avinash-k-201b47384">https://www.linkedin.com/in/avinash-k-201b47384</a>
+▸ WhatsApp:6379301585
 
-    <p>Thank you for visiting my profile </p>
+  Thank you for visiting my profile 
     
   </body>
 </html>

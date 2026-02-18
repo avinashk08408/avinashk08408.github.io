@@ -8,7 +8,7 @@
       About me
     </h2>
     <p>A Cybersecurity-oriented engineering student with a strong interest in secure systems and software engineering.</p>
-    <h2>skills</h2>
+    <h2>Skills</h2>
     <p>
   ▸ Strong foundation in <strong>Programing Language </strong>like Python, C, and C++ with experience in building structured, maintainable applications.
 

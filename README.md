@@ -1,1 +1,1 @@
-HHello, I'm Mohanakrishnan C 👋i,I'm Avinash k
+Hi,I'm Avinash.k 

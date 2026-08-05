@@ -1,0 +1,36 @@
+:root{
+
+--bg:#2D343C;
+--surface:#39424D;
+--surface-light:#454F5D;
+--card:#404955;
+
+--primary:#A9D8F8;
+--primary-light:#DDF6FF;
+
+--white:#F8FAFC;
+--text:#B9C5D1;
+
+--border:rgba(255,255,255,.08);
+
+--shadow:rgba(0,0,0,.18);
+
+--font:"Inter",sans-serif;
+
+--section:120px;
+
+--container:1400px;
+
+--radius-sm:12px;
+--radius:20px;
+--radius-lg:30px;
+
+--transition:.35s ease;
+
+--shadow-sm:0 10px 25px rgba(0,0,0,.12);
+--shadow-md:0 20px 45px rgba(0,0,0,.18);
+--shadow-lg:0 35px 80px rgba(0,0,0,.22);
+
+--glow:0 0 35px rgba(169,216,248,.25);
+
+}

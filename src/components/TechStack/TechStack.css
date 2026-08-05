@@ -1,0 +1,118 @@
+.tech{
+    background:var(--bg);
+}
+
+.tech-grid{
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    gap:25px;
+}
+
+.tech-box{
+    padding:35px;
+    transition:var(--transition);
+    overflow:hidden;
+    position:relative;
+}
+
+.tech-box::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        135deg,
+        rgba(169,216,248,.08),
+        transparent 60%
+    );
+    opacity:0;
+    transition:.4s;
+}
+
+.tech-box:hover::before{
+    opacity:1;
+}
+
+.tech-box:hover{
+    transform:translateY(-10px);
+    box-shadow:var(--glow);
+}
+
+.large{
+    grid-column:span 6;
+}
+
+.tech-box:not(.large){
+    grid-column:span 3;
+}
+
+.tech-box h3{
+    font-size:26px;
+    margin-bottom:30px;
+    color:var(--white);
+}
+
+.skill-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+}
+
+.skill-chip{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:14px 18px;
+    border-radius:16px;
+    background:rgba(255,255,255,.05);
+    border:1px solid var(--border);
+    transition:var(--transition);
+    cursor:pointer;
+}
+
+.skill-chip:hover{
+    background:var(--primary);
+    color:#1f252c;
+    transform:translateY(-5px);
+}
+
+.skill-chip svg{
+    font-size:22px;
+}
+
+.skill-chip span{
+    font-size:15px;
+    font-weight:500;
+}
+
+@media(max-width:1100px){
+
+.tech-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.large,
+.tech-box:not(.large){
+    grid-column:span 1;
+}
+
+}
+
+@media(max-width:768px){
+
+.tech-grid{
+    grid-template-columns:1fr;
+}
+
+.tech-box{
+    padding:28px;
+}
+
+.tech-box h3{
+    font-size:22px;
+}
+
+.skill-chip{
+    width:100%;
+}
+
+}
